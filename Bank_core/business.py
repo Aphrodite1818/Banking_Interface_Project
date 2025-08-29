@@ -6,17 +6,21 @@ class Business_Account():
         self.balance = balance
 
     def withdraw(self, amount):
-        if amount < 0:
+        if amount <=0:
             raise ValueError("Withdrawal of negative amount is not allowed")
-        elif amount > self.balance:
-            raise ValueError("Insufficient funds")
         else:
             self.balance -= amount
             return self.balance
         
     def deposit(self, amount):
-        if amount < 0:
+        if amount <=0:
             raise ValueError("Deposit of negative amount is not allowed")
         else:
             self.balance += amount
             return self.balance
+        
+    def __str__(self):
+        return f"Business Account({self.account_number}, {self.account_holder}, {self.business_name}, Balance: {self.balance})"
+    
+    def __repr__(self):
+        return f"Business_Account({self.account_number}, {self.account_holder}, {self.business_name}, {self.balance})"
