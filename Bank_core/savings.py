@@ -1,5 +1,5 @@
 class Savings_Account():
-    def __init__(self, account_number:str, account_holder:str, interest_rate:float, balance :str=0):
+    def __init__(self, account_number:str, account_holder:str, interest_rate:float, balance :float=0):
         self.account_number = account_number
         self.account_holder = account_holder
         self.interest_rate = interest_rate
